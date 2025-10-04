@@ -1,0 +1,15 @@
+/* Main App Container */
+.App {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Ensure smooth scroll container */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+}
