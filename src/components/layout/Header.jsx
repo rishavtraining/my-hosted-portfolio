@@ -56,7 +56,7 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <motion.div
-            className="md:hidden py-4"
+            className="md:hidden py-4 absolute top-[64px] left-0 right-0 z-40 bg-bg-primary shadow-lg border-b border-border-color"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
