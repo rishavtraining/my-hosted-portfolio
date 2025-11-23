@@ -1,12 +1,32 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { User, MapPin, Mail, Phone } from 'lucide-react';
+import { User, MapPin, Mail, Phone, FileText } from 'lucide-react';
 import { profileData } from '../../data/profile';
 import { educationData } from '../../data/experience';
 import Terminal, { TerminalLine } from '../common/Terminal';
 import Card from '../common/Card';
 
+const buttonVariants = {
+  hover: {
+    scale: 1.05,
+    // Note: I'm keeping the original shadow for the glow effect.
+    boxShadow: "0 0 15px rgba(52, 211, 163, 0.8)", 
+    transition: {
+      duration: 0.2,
+      yoyo: Infinity,
+      ease: "easeOut"
+    }
+  },
+  tap: {
+    scale: 0.95,
+  }
+};
+
 const About = () => {
+  // Define the link for your resume (assuming it's in profileData or you can hardcode it)
+  // Ensure profileData.resumeLink exists in your data file
+  const resumeLink = profileData.resumeLink || '/path/to/your/resume.pdf';
+
   return (
     <section id="about" className="py-20 md:py-32 bg-bg-primary relative">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
@@ -45,10 +65,6 @@ const About = () => {
               <div>
                 <span className="text-cyber-cyan">location:</span>{' '}
                 <span className="text-text-primary">"{profileData.location}"</span>
-              </div>
-              <div>
-                <span className="text-cyber-cyan">email:</span>{' '}
-                <span className="text-text-primary">"{profileData.email}"</span>
               </div>
               <div className="pt-4 border-t border-border-color">
                 <span className="text-cyber-cyan">status:</span>{' '}
@@ -101,19 +117,35 @@ const About = () => {
           </Card>
         </div>
 
-        {/* Additional Info */}
+        {/* Updated Button */}
         <motion.div
-          className="max-w-4xl mx-auto mt-12"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          className="max-w-4xl mx-auto mt-12 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
-          <Card>
-            <p className="text-text-secondary leading-relaxed">
-              {profileData.summary2}
-            </p>
-          </Card>
+          <motion.a
+            href={resumeLink}
+            target="_blank" // Opens the link in a new tab
+            rel="noopener noreferrer"
+            variants={buttonVariants}
+            whileHover="hover"
+            whileTap="tap"
+            className="inline-flex items-center justify-center px-8 py-3 text-base font-medium rounded-lg 
+                       
+                       /* --- FIX: Updated Color and Font --- */
+                       text-bg-primary /* Use the dark background color for contrast */
+                       bg-terminal-green border border-terminal-green shadow-lg shadow-terminal-green/50 
+                       
+                       font-mono /* Apply the terminal font style */
+                       
+                       hover:bg-terminal-green/80 transition-all duration-300 ease-in-out uppercase tracking-wider
+                       focus:outline-none focus:ring-4 focus:ring-terminal-green/50"
+          >
+            <FileText className="w-5 h-5 mr-3" />
+            Resume
+          </motion.a>
         </motion.div>
       </div>
     </section>

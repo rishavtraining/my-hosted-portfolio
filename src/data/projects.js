@@ -6,7 +6,7 @@ export const projectsData = [
     tech: ["Python", "OpenCV", "Raspberry Pi", "Computer Vision", "Google Maps API", "IoT"],
     github: "https://github.com/rishavtraining/rescue_drone_project",
     highlights: [
-      "Top 15 (AIR) in e-Yantra National level Competition",
+      "Top 15 (AIR) in e-Yantra National level Competition [cite: 42]",
       "Real-time human detection and location tracking",
       "Web portal for rescue team coordination",
       "Autonomous deployment system"
@@ -51,5 +51,21 @@ export const projectsData = [
       "State management"
     ],
     category: "Game Dev"
+  },
+  // --- NEW PROJECT ADDED ---
+  {
+    id: 5,
+    title: "Automated Prisma Vulnerability Patcher",
+    description: "Engineered a full-stack automation pipeline (Jenkins, UI) to mitigate critical Prisma vulnerabilities in Java/Gradle containers, significantly reducing manual effort. The system dynamically cross-references the Maven repository to update build.gradle to the most stable, secure version.",
+    tech: ["Java", "Gradle", "Jenkins", "Full-Stack", "Prisma", "Maven"],
+    // Assuming the company name is part of the project context, using it here for the source
+    company: "Barclays", 
+    highlights: [
+      "Top 6 in Barclays India Code-a-thon 2023",
+      "Engineered full-stack automation pipeline (Jenkins, UI)",
+      "Developed logic to automatically update build.gradle",
+      "Significantly reduced manual effort in dependency fixing"
+    ],
+    category: "DevOps/Automation"
   }
 ];

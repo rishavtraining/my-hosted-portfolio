@@ -1,9 +1,20 @@
 export const experienceData = [
   {
     id: 1,
+    company: "Experian",
+    role: "Senior Software Engineer",
+    duration: "Nov 2025 - Present",
+    location: "Hyderabad, India",
+    responsibilities: [
+      "Working on a POC to secure our backend application with API Gateway (APIGEE)"
+    ],
+    tech: ["AWS", "C#", ".Net", "REST APIs"]
+  },
+  {
+    id: 2,
     company: "Barclays",
     role: "Software Developer II",
-    duration: "Oct 2022 - Present",
+    duration: "Oct 2022 - Nov 2025",
     location: "Pune, India",
     responsibilities: [
       "Led optimization of Credit Card Statement Journey, scaling from 60K to 1M+ customers/day and reducing processing time from 5 hours to 1 hour",
@@ -16,7 +27,7 @@ export const experienceData = [
     tech: ["AWS", "Python", "Java", "PySpark", "RASA", "Lambda", "Glue", "DynamoDB"]
   },
   {
-    id: 2,
+    id: 3,
     company: "Bikayi Inc.",
     role: "Software Engineer",
     duration: "March 2022 - Sept 2022",
