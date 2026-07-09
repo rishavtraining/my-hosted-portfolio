@@ -20,7 +20,10 @@ export const skillsData = {
     { name: "DynamoDB", level: 85 },
     { name: "S3", level: 90 },
     { name: "SQS", level: 85 },
-    { name: "AWS Lex", level: 75 },
+    { name: "EKS", level: 80 },
+    { name: "EventBridge", level: 80 },
+    { name: "Kinesis", level: 80 },
+    { name: "Apigee", level: 75 },
     { name: "Docker", level: 80 },
     { name: "CI/CD", level: 85 }
   ],

@@ -6,9 +6,11 @@ export const experienceData = [
     duration: "Nov 2025 - Present",
     location: "Hyderabad, India",
     responsibilities: [
-      "Working on a POC to secure our backend application with API Gateway (APIGEE)"
+      "Own end-to-end design and delivery of an internal usage-based billing platform on AWS (EKS, EventBridge, Kinesis), shaping the solution design and deploying the infrastructure and core billing workflow",
+      "Built a serverless pipeline (EventBridge, Kinesis Firehose, S3) processing 1M+ events/day into partitioned Parquet datasets, with multi-stage buffering and failure handling for downstream billing and analytics",
+      "Migrated identifier PIN lookups for 10M consumers from a legacy mainframe to a cloud endpoint on EKS and DynamoDB, cutting operating costs by roughly 40%. Validated the move with an Apigee shadow run comparing latency and correctness against live traffic, added circuit-breaker fallback and Splunk monitoring, then cut over in waves with zero consumer impact"
     ],
-    tech: ["AWS", "C#", ".Net", "REST APIs"]
+    tech: ["AWS", "EKS", "EventBridge", "Kinesis", "DynamoDB", "Apigee", "Splunk"]
   },
   {
     id: 2,
@@ -17,14 +19,13 @@ export const experienceData = [
     duration: "Oct 2022 - Nov 2025",
     location: "Pune, India",
     responsibilities: [
-      "Led optimization of Credit Card Statement Journey, scaling from 60K to 1M+ customers/day and reducing processing time from 5 hours to 1 hour",
-      "Developed Annual Statement platform using AWS Glue and PySpark processing 100K+ records/day, exceeding performance targets 4x",
-      "Built AI-Native ChatBot using RASA with custom frontend, integrated with Confluence and Bitbucket APIs",
-      "Automated vulnerability patching in Java and Gradle containers, reducing manual effort from 6-7 hours to 20 minutes",
-      "Provisioned scalable infrastructure on AWS using Lambda, Glue, DynamoDB, SQS, S3, API Gateway",
-      "Built JBPM Dashboard UI supporting multiple stages of customer journey"
+      "Re-architected statement storage for 10M+ credit card customers after production writes hit DynamoDB's 4MB item limit: shipped a tactical fix offloading oversized records to S3 to unblock affected customers, then led the move to unified S3-based storage, removing dual-read logic for downstream teams",
+      "Decoupled the core Statement platform's synchronous flows with SQS-based asynchronous processing and DLQ error handling, doubling throughput from 40K to 80K events/day for monthly statements",
+      "Delivered the Annual Statement application solo, end to end: Glue batch processing with reconciliation workflows and a phased rollout that scaled from 30K to 1M+ customers with zero production issues; awarded the India Star Award",
+      "Cut a Glue pipeline's output from roughly 100K small JSON files to about 100 through two-tier file merging, sharply reducing S3 request and downstream processing overhead; the pattern was adopted by other teams",
+      "Extended the Statement History REST API with DynamoDB-backed time-range queries, deployed on ECS behind API Gateway and ALB to serve millions of consumer requests"
     ],
-    tech: ["AWS", "Python", "Java", "PySpark", "RASA", "Lambda", "Glue", "DynamoDB"]
+    tech: ["AWS", "Python", "Java", "Glue", "DynamoDB", "SQS", "S3", "ECS", "API Gateway"]
   },
   {
     id: 3,

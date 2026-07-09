@@ -2,9 +2,9 @@ export const achievementsData = [
   {
     id: 1,
     title: "LeetCode Master",
-    description: "Solved 700+ problems with 1600+ contest rating",
+    description: "Solved 700+ problems with 1650+ contest rating, top 15%",
     icon: "code",
-    stats: "700+ problems | 1600+ rating",
+    stats: "700+ problems | 1650+ rating",
     color: "#00ff41"
   },
   {

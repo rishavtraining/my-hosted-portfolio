@@ -5,7 +5,7 @@ export const profileData = {
   location: "Hyderabad, India",
   email: "rishav99rocks@gmail.com",
   phone: "87xxxxxx22",
-  summary: "Hey there 👋! Meet a Full-Stack Developer 🙄 at Experian with 3+ years of experience in Backend, Frontend, and cloud development. Solved 700+ DSA problems recieved 25+ recognitions. Eager to learn about AI and new tech, driven by a passion for building innovative side projects. I aim to grow into a technical leader who can inspire change.",
+  summary: "Hey there 👋! Meet a Backend Engineer 🙄 at Experian with 3.5+ years designing and running distributed systems on AWS for banking and credit bureau platforms. Comfortable owning systems from design through production support. Solved 700+ DSA problems, received 25+ recognitions. Actively learning applied AI, including RAG and LLM-based tooling. I aim to grow into a technical leader who can inspire change.",
   summary2: "Introducing a developer with a distinct vision: future founder 🚀 and impactful leader 🌟. He’s keenly focused on growing beyond pure tech, feeling perfectly capable of becoming a formidable businessman 💼. (Frankly, he still hasn't forgiven the selectors for missing his call-up to the Indian cricket team 🏏) His main goal is simple: to expand his influence and help people in whatever grand capacity he deems necessary ✨.",
   links: {
     github: "https://github.com/rishavtraining",
